@@ -111,7 +111,15 @@
 </header>
 <main role="main" property="mainContentOfPage" class="container">
 <h1 property="name" id="wb-cont">Canada.ca theme</h1>
-<ul class="list-inline">
+<p>This page is straight from GCWeb package but the footer code is changed inline for the code we use in CDTS / ESDC intranet</p>
+<ul>
+        <li><a href="./index-en.html">ajax-replace menu from GCWeb, footer inline (works)</a></li>
+        <li><a href="./index.html">ajax-replace local menu, external foot nav (broken)</a></li>
+        <li><a href="./index_local.html">ajax-replace local menu, local footer nav (broken)</a></li>
+        <li><a href="./index_footer.html">ajax local menu, local full footer (works)</a></li>
+        <li><a href="./index_nocache.html">ajax-replace local menu, wb-ajax no cache local foot nav (works)</a></li>
+    </ul>
+    <ul class="list-inline">
 <li><a class="btn btn-primary" href="docs/ref/GCWeb/GCWeb-en.html">Documentation</a></li>
 <li><a class="btn btn-primary" href="https://github.com/wet-boew/GCWeb/issues/new?title=Canada.ca%20theme:%20">Questions or comments?</a></li>
 </ul>
@@ -1043,43 +1051,55 @@
 </div>
 </div>
 </main>
-<footer role="contentinfo" id="wb-info">
-<nav role="navigation" class="container wb-navcurr">
-<h2 class="wb-inv">About government</h2>
-<ul class="list-unstyled colcount-sm-2 colcount-md-3">
-<li><a href="https://www.canada.ca/en/contact.html">Contact us</a></li>
-<li><a href="https://www.canada.ca/en/government/dept.html">Departments and agencies</a></li>
-<li><a href="https://www.canada.ca/en/government/publicservice.html">Public service and military</a></li>
-<li><a href="https://www.canada.ca/en/news.html">News</a></li>
-<li><a href="https://www.canada.ca/en/government/system/laws.html">Treaties, laws and regulations</a></li>
-<li><a href="https://www.canada.ca/en/transparency/reporting.html">Government-wide reporting</a></li>
-<li><a href="https://pm.gc.ca/eng">Prime Minister</a></li>
-<li><a href="https://www.canada.ca/en/government/system.html">How government works</a></li>
-<li><a href="https://open.canada.ca/en/">Open government</a></li>
-</ul> </nav>
-<div class="brand">
-<div class="container">
-<div class="row">
-<nav class="col-md-9 col-lg-10 ftr-urlt-lnk">
-<h2 class="wb-inv">About this site</h2>
-<ul>
-<li><a href="https://www.canada.ca/en/social.html">Social media</a></li>
-<li><a href="https://www.canada.ca/en/mobile.html">Mobile applications</a></li>
-<li><a href="https://www1.canada.ca/en/newsite.html">About Canada.ca</a></li>
-<li><a href="https://www.canada.ca/en/transparency/terms.html">Terms and conditions</a></li>
-<li><a href="https://www.canada.ca/en/transparency/privacy.html">Privacy</a></li>
-</ul>
-</nav>
-<div class="col-xs-6 visible-sm visible-xs tofpg">
-<a href="#wb-cont">Top of Page <span class="glyphicon glyphicon-chevron-up"></span></a>
-</div>
-<div class="col-xs-6 col-md-3 col-lg-2 text-right">
-<img src="./assets/wmms-blk.svg" alt="Symbol of the Government of Canada">
-</div>
-</div>
-</div>
-</div>
-</footer>
+<footer id="wb-info" role="contentinfo">
+        <nav role="navigation" class="container wb-navcurr">
+        <h2 class="wb-inv">About this site</h2>
+        <p>This is ajaxed from local full footer</p>
+        <div class="row">
+            <section class="col-sm-3">
+                <h3>About us</h3>
+                <ul class="list-unstyled">
+                    <li><a href="http://edsc.prv/en/news/dm/index.shtml">DMs Messages</a></li>
+                    <li><a href="http://edsc.prv/en/help.shtml">Help and Important Notices</a></li>
+                    <li><a href="http://edsc.prv/en/intersection/index.shtml">Intersection</a></li>
+                    <li><a href="http://edsc.prv/en/news/index.shtml">News</a></li>
+                </ul>
+            </section>
+            <section class="col-sm-3">
+                <h3>Contact us</h3>
+                <ul class="list-unstyled">
+                    <li><a href="http://sage-geds.tpsgc-pwgsc.gc.ca/cgi-bin/direct500/eng/TE?FN=index.htm">Find a GoC
+                            employee</a></li>
+                    <li><a href="http://iservice.prv/eng/support/index_form.shtml">iService Support</a></li>
+                </ul>
+            </section>
+            <section class="col-sm-3">
+                <h3>Communities</h3>
+                <ul class="list-unstyled">
+                    <li><a href="http://blogs-blogues.prv/SM-DM/?lang=en">Senior Management Blog</a></li>
+                    <li><a href="http://edsc.prv/en/stay_connected/index.shtml">Stay Connected</a></li>
+                    <li><a href="http://edsc.prv/en/stay_connected/handbook.shtml">Web Handbook</a></li>
+                </ul>
+            </section>
+            <div class="col-sm-3 col-lg-3 brdr-lft">
+                <section>
+                    <h3>Feedback</h3>
+                    <p><a href="http://edsc.prv/en/contact/index.shtml"><img alt="Feedback about this Web site" src="./assets/feedback.png"></a></p>
+                </section>
+            </div>
+        </div>
+    </nav>
+        <div class="brand">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-8"><a href="https://www.canada.ca/en.html"><img alt="" src="./assets/sig-blk-en.svg"><span
+                        class="wb-inv">Government of Canada</span></a></div>
+                        <div class="col-xs-6 visible-sm visible-xs tofpg"><a href="#wb-cont">Top of Page<span class="glyphicon glyphicon-chevron-up"></span></a></div>
+                        <div class="col-xs-6 col-md-4 text-right"><img alt="Symbol of the Government of Canada" src="./assets/wmms-blk.svg"></div>
+                    </div>
+                </div>
+            </div>
+    </footer>
 <!--[if gte IE 9 | !IE ]><!-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 <script src="./js/wet-boew.min.js"></script>
